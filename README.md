@@ -1,5 +1,5 @@
 # VOD-FRONT
-Front end du projet VOD - House Of Code - Formateur : Alexandre Peyron - Langage : JS - Framework : Angular
+Front end du projet VOD - House Of Code - Formateur : Alexandre Peyron - Langage : JS - Framework : Angular - Librairie(s): Bootstrap
 
 <p align="center"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1200px-Angular_full_color_logo.svg.png" width="200px"></p>
 
