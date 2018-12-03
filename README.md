@@ -1,7 +1,7 @@
 # VOD-FRONT
 Front end du projet VOD - House Of Code - Formateur : Alexandre Peyron - Langage : JS - Framework : Angular - Librairie(s): Bootstrap - Réalisé par : Quentin Dudon & Clément Ballet
 
-<p align="center"><img src="https://www.pixelstech.net/article/images/bootstrap-angularjs.jpg" width="200px"></p>
+<p align="center"><img src="https://www.pixelstech.net/article/images/bootstrap-angularjs.jpg" width="300px"></p>
 
 Lien vers le repo du back end : <a href="https://github.com/ItsFaresse/SymphonyEquipe1" target="_blank">https://github.com/ItsFaresse/SymphonyEquipe1</a>
 
