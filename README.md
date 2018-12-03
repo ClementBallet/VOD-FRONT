@@ -1,5 +1,5 @@
 # VOD-FRONT
-Front end du projet VOD - House Of Code - Formateur : Alexandre Peyron - Langage : JS - Framework : Angular - Librairie(s): Bootstrap - Réalisé par : Quentin Dudon & Clément Ballet
+Front end du projet VOD - House Of Code - Formateur : <a href="https://github.com/Alexandre-Peyron">Alexandre Peyron</a> - Langage : JS - Framework : Angular - Librairie(s): Bootstrap - Réalisé par : <a href="https://github.com/Quentin-Dudon">Quentin Dudon</a> & <a href="https://github.com/ClementBallet">Clément Ballet</a>
 
 <p align="center"><img src="https://www.pixelstech.net/article/images/bootstrap-angularjs.jpg" width="300px"></p>
 
