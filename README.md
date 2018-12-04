@@ -1,28 +1,27 @@
-# VOD-FRONT
-Front end du projet VOD - House Of Code - Formateur : <a href="https://github.com/Alexandre-Peyron">Alexandre Peyron</a> - Langage : JS - Framework : Angular - Librairie(s): Bootstrap - Réalisé par : <a href="https://github.com/Quentin-Dudon">Quentin Dudon</a> & <a href="https://github.com/ClementBallet">Clément Ballet</a>
+# ProjetVod
 
-<p align="center"><img src="https://www.pixelstech.net/article/images/bootstrap-angularjs.jpg" width="300px"></p>
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.1.
 
-Lien vers le repo du back end : <a href="https://github.com/ItsFaresse/SymphonyEquipe1" target="_blank">https://github.com/ItsFaresse/SymphonyEquipe1</a>
+## Development server
 
-## User Stories
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-### US001 - Page d'accueil
-- Le visiteur navigue sur l'application (routes)
-- Par défaut, le visiteur voit les films filtrés par genre avec un système de caroussel.
-- Barre de navigation avec filtre supplémentaire. (date, durée, search bar pour acteurs/réalisateurs)
-- On peut également naviguer vers la page de connexion/inscription (routes)
-- Un bouton qui permet d'accéder sur la page détaillée du film.
-- Un bouton qui permet d'ajouter les films dans le panier 
-- Le panier indique le nombre de films selectionné.
+## Code scaffolding
 
-### US002 - Page détaillée du film
-- Liste les détails du film: Synopsis, Titre, Sortie, Image, Prix, etc... 
-- Un bouton qui permet d'ajouter les films dans le panier.
-- L'utilisateur peut noter. 
-- L'utilisateur peut commenter.
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-### US003 - Panier
-- Liste les films que l'utilisateurs a selectionné : Prix du film seletionné, Titre, Photos.
-- Possibilité de supprimer les films dans le panier
-- Prix Total du panier
+## Build
+
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
