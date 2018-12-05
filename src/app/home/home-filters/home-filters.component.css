@@ -1,0 +1,9 @@
+section {
+  height: 100px;
+  background-color: lightgray;
+  display: flex;
+}
+
+.dropdown {
+  margin: 20px;
+}

@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-filters',
-  templateUrl: './filters.component.html',
-  styleUrls: ['./filters.component.css']
+  selector: 'app-home-filters',
+  templateUrl: './home-filters.component.html',
+  styleUrls: ['./home-filters.component.css']
 })
-export class FiltersComponent implements OnInit {
+export class HomeFiltersComponent implements OnInit {
 
   years = [];
 
