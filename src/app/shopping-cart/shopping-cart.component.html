@@ -1,3 +1,54 @@
-<p>
-  shopping-cart works!
-</p>
+<main>
+  <section>
+    <p><a routerLink="">Accueil</a>><a>Panier</a></p>
+    <h1>Votre Panier</h1>
+    <table class="table table-hover" >
+      <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Affiche</th>
+        <th scope="col">Film</th>
+        <th scope="col">Prix</th>
+        <th scope="col">Supprimer</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let image of images | slice:0:10">
+        <th scope="row">1</th>
+        <td><img src="{{image.url}}" width="150px" height="200px"></td>
+        <td *ngFor="let description of descriptions | slice:0:1">
+          <h4>{{description.title | slice:1:20}}</h4>
+          <p>{{description.body}} ...</p>
+          <p>Notes : </p>
+        </td>
+        <td *ngFor="let description of descriptions | slice:0:1">
+          <p>{{description.userId}}€</p>
+        </td>
+        <td><a><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a></td>
+      </tr>
+      </tbody>
+    </table>
+  </section>
+  <aside>
+    <h1>Total</h1>
+    <table class="table table-hover">
+      <tbody>
+        <tr>
+          <td>Sous-total</td>
+          <td>xxx</td>
+        </tr>
+        <tr>
+          <td>Taxes</td>
+          <td>xxx</td>
+        </tr>
+        <tr>
+          <td>Total TTC</td>
+          <td>xxx</td>
+        </tr>
+      </tbody>
+    </table>
+    <div>
+      <button type="button" class="btn btn-success">Confirmer la commande</button>
+    </div>
+  </aside>
+</main>

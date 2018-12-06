@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-shopping-cart',
@@ -8,9 +8,22 @@ import { Router } from '@angular/router';
 })
 export class ShoppingCartComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  images: any[];
+  descriptions: any[];
+
+  constructor(private http: HttpClient) { }
 
   ngOnInit() {
-  }
+    // ON RECUPERE DES IMAGES
+    this.http.get('https://jsonplaceholder.typicode.com/photos')
+      .subscribe((response: any) => {
+        this.images = response;
+      });
 
+    // ON RECUPERE LE CONTENU
+    this.http.get('https://jsonplaceholder.typicode.com/posts')
+      .subscribe((response: any) => {
+        this.descriptions = response;
+      });
+  }
 }

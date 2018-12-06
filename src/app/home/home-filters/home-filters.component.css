@@ -11,3 +11,9 @@ section {
   margin: 0 auto;
   display: flex;
 }
+
+.scroll{
+  overflow-y: scroll;
+  max-height: 200px;
+}
+
