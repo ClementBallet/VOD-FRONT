@@ -1,0 +1,54 @@
+main {
+  display: flex;
+}
+
+section {
+  width: 1000px;
+  margin: 100px auto;
+  background-color: whitesmoke;
+}
+
+h1{
+  margin: 10px;
+}
+
+aside {
+  width: 400px;
+  height: 500px;
+  margin: 100px auto;
+  background-color: whitesmoke;
+}
+
+a {
+  color: black;
+  margin: 10px;
+}
+
+table {
+  margin-top: 50px;
+}
+
+thead {
+  color: whitesmoke;
+  background-color: #343A40;
+}
+
+aside > table > tbody > tr:nth-of-type(3){
+  font-weight: bold;
+}
+
+div {
+  text-align: center;
+}
+
+img {
+  margin: 10px;
+}
+
+section > tr > td:nth-of-type(1){
+  width: 100px;
+}
+
+section > tr > td:nth-of-type(2){
+  width: 500px;
+}
