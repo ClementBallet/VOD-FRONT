@@ -18,6 +18,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomeCarouselParentComponent } from './home/home-carousel-parent/home-carousel-parent.component';
 import { HomeCarouselEnfantComponent } from './home/home-carousel-enfant/home-carousel-enfant.component';
 
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { RatingComponent } from './movie-single/rating/rating.component';
+import { MoviePricingComponent } from './movie-single/movie-pricing/movie-pricing.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,13 +31,16 @@ import { HomeCarouselEnfantComponent } from './home/home-carousel-enfant/home-ca
     HomeComponent,
     HomeCarouselComponent,
     HomeFiltersComponent,
-    HomeCarouselParentComponent,
-    HomeCarouselEnfantComponent,
+    RatingComponent,
+    MoviePricingComponent
   ],
   imports: [
     BrowserModule,
+    RouterModule.forRoot(ROUTES),
+    NgbModule,
+    HomeCarouselParentComponent,
+    HomeCarouselEnfantComponent,
     HttpClientModule,
-    RouterModule.forRoot(ROUTES)
   ],
   providers: [
     {provide: APP_BASE_HREF, useValue: ''}
