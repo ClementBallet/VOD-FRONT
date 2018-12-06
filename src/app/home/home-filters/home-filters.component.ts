@@ -10,7 +10,7 @@ export class HomeFiltersComponent implements OnInit {
   years = [];
 
   constructor() {
-    for (let i = 1950; i < 2000; i++) {
+    for (let i = 1950; i < 2018; i++) {
       this.years.push(i);
     }
   }
