@@ -32,14 +32,14 @@ import { MoviePricingComponent } from './movie-single/movie-pricing/movie-pricin
     HomeCarouselComponent,
     HomeFiltersComponent,
     RatingComponent,
-    MoviePricingComponent
+    MoviePricingComponent,
+    HomeCarouselParentComponent,
+    HomeCarouselEnfantComponent,
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(ROUTES),
     NgbModule,
-    HomeCarouselParentComponent,
-    HomeCarouselEnfantComponent,
     HttpClientModule,
   ],
   providers: [
