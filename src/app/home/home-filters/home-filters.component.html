@@ -1,33 +1,33 @@
 <section>
-  <div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Category
-    </button>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Aventure</a>
-      <a class="dropdown-item" href="#">Comédie</a>
-      <a class="dropdown-item" href="#">Horreur</a>
-      <a class="dropdown-item" href="#">Fantastique</a>
+  <div class="center">
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Category
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Aventure</a>
+        <a class="dropdown-item" href="#">Comédie</a>
+        <a class="dropdown-item" href="#">Horreur</a>
+        <a class="dropdown-item" href="#">Fantastique</a>
+      </div>
     </div>
-  </div>
-  <div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Notes
-    </button>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-      <a class="dropdown-item" href="#">Les mieux notés</a>
-      <a class="dropdown-item" href="#">Les moins bien notés</a>
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Notes
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#">Les mieux notés</a>
+        <a class="dropdown-item" href="#">Les moins bien notés</a>
+      </div>
     </div>
-  </div>
-  <p>Année : De</p>
-  <div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    </button>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-      <li *ngFor="let year of years | slice: 1: 5">
-        {{ year }}
-      </li>
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Année
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#" *ngFor="let year of years">{{ year }}</a>
+      </div>
     </div>
   </div>
 </section>
