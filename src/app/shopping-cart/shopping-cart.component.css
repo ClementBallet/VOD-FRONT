@@ -5,7 +5,10 @@ main {
 section {
   width: 1000px;
   margin: 100px auto;
+  padding: 10px;
   background-color: whitesmoke;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
 }
 
 h1{
@@ -14,9 +17,12 @@ h1{
 
 aside {
   width: 400px;
-  height: 500px;
+  height: 400px;
   margin: 100px auto;
+  padding: 10px;
   background-color: whitesmoke;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
 }
 
 a {

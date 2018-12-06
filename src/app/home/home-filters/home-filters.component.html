@@ -5,11 +5,7 @@
         Category
       </button>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item" href="#">Aventure</a>
-        <a class="dropdown-item" href="#">Comédie</a>
-        <a class="dropdown-item" href="#">Horreur</a>
-        <a class="dropdown-item" href="#">Fantastique</a>
+        <a *ngFor="let category of categories" class="dropdown-item" href="#">{{category.name}}</a>
       </div>
     </div>
     <div class="dropdown">
