@@ -18,9 +18,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomeCarouselParentComponent } from './home/home-carousel-parent/home-carousel-parent.component';
 import { HomeCarouselEnfantComponent } from './home/home-carousel-enfant/home-carousel-enfant.component';
 
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RatingComponent } from './movie-single/rating/rating.component';
 import { MoviePricingComponent } from './movie-single/movie-pricing/movie-pricing.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -28,13 +29,14 @@ import { MoviePricingComponent } from './movie-single/movie-pricing/movie-pricin
     NavbarComponent,
     MovieSingleComponent,
     ShoppingCartComponent,
+    AboutComponent,
     HomeComponent,
     HomeCarouselComponent,
-    HomeFiltersComponent,
-    RatingComponent,
-    MoviePricingComponent,
     HomeCarouselParentComponent,
     HomeCarouselEnfantComponent,
+    HomeFiltersComponent,
+    RatingComponent,
+    MoviePricingComponent
   ],
   imports: [
     BrowserModule,
