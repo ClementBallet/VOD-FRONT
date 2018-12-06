@@ -10,6 +10,7 @@ export class HomeCarouselEnfantComponent implements OnInit {
 
   images: any[];
   descriptions: any [];
+  categories: any[];
 
   constructor(private http: HttpClient) { }
 
@@ -21,9 +22,16 @@ export class HomeCarouselEnfantComponent implements OnInit {
       });
 
     // ON RECUPERE LE CONTENU
-    this.http.get('https://jsonplaceholder.typicode.com/posts')
+    this.http.get('http://127.0.0.1:8006/api/movies')
       .subscribe( (response: any) => {
-        this.descriptions = response;
+        this.descriptions = response['hydra:member'];
+      });
+
+    // ON RECUPERE LE CONTENU
+    this.http.get('http://127.0.0.1:8006/api/categories')
+      .subscribe( (response: any) => {
+        this.categories = response['hydra:member'];
+        console.log(this.categories);
       });
   }
 }
