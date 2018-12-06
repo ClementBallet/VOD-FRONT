@@ -7,7 +7,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { MovieSingleComponent } from './movie-single/movie-single.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 // PAGE HOME
-import {HomeComponent} from "./home/home.component";
+import {HomeComponent} from "./home/home-global/home.component";
 import {HomeCarouselComponent} from "./home/home-carousel/home-carousel.component";
 import {HomeFiltersComponent} from "./home/home-filters/home-filters.component";
 

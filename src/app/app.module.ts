@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {APP_BASE_HREF} from '@angular/common';
+import { APP_BASE_HREF } from '@angular/common';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -11,9 +11,12 @@ import { RouterModule } from '@angular/router';
 import { ROUTES } from './app.routes';
 
 // PAGES
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from './home/home-global/home.component';
 import { HomeCarouselComponent } from './home/home-carousel/home-carousel.component';
 import { HomeFiltersComponent } from './home/home-filters/home-filters.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HomeCarouselParentComponent } from './home/home-carousel-parent/home-carousel-parent.component';
+import { HomeCarouselEnfantComponent } from './home/home-carousel-enfant/home-carousel-enfant.component';
 
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { RatingComponent } from './movie-single/rating/rating.component';
@@ -34,7 +37,10 @@ import { MoviePricingComponent } from './movie-single/movie-pricing/movie-pricin
   imports: [
     BrowserModule,
     RouterModule.forRoot(ROUTES),
-    NgbModule
+    NgbModule,
+    HomeCarouselParentComponent,
+    HomeCarouselEnfantComponent,
+    HttpClientModule,
   ],
   providers: [
     {provide: APP_BASE_HREF, useValue: ''}
