@@ -1,29 +1,31 @@
-<section>
-  <div class="center">
-    <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Category
-      </button>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a *ngFor="let category of categories" class="dropdown-item" href="#">{{category.name}}</a>
+<main>
+  <section>
+    <div class="center">
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Category
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a *ngFor="let category of categories" class="dropdown-item" href="#">{{category.name}}</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Notes
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#">Les mieux notés</a>
+          <a class="dropdown-item" href="#">Les moins bien notés</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Année
+        </button>
+        <div class="dropdown-menu scroll" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#" *ngFor="let year of years">{{ year }}</a>
+        </div>
       </div>
     </div>
-    <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Notes
-      </button>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" href="#">Les mieux notés</a>
-        <a class="dropdown-item" href="#">Les moins bien notés</a>
-      </div>
-    </div>
-    <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Année
-      </button>
-      <div class="dropdown-menu scroll" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" href="#" *ngFor="let year of years">{{ year }}</a>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
+</main>

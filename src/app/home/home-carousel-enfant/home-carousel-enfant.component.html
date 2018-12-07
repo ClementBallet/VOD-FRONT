@@ -13,7 +13,7 @@
           <img class="img-main" src="{{description.image}}">
           <div class="box">
             <h3>{{description.name}}</h3>
-            <p>{{description.synopsis}}</p>
+            <p>{{description.synopsis | slice:0:100}}...</p>
             <button type="button" class="btn btn-success" aria-label="Left Align">
               <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true" style="margin-right: 10px"></span>Ajouter au panier
             </button>

@@ -26,7 +26,6 @@ export class HomeCarouselEnfantComponent implements OnInit {
       .subscribe( (response: any) => {
         this.descriptions = response['hydra:member'];
         this.nbMovie = this.descriptions.length;
-        console.log('nbMovie = this.descriptions.length', this.nbMovie);
     });
   }
 
