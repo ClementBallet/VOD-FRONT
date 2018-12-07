@@ -5,18 +5,19 @@
     <b class="fa fa-chevron-left fa-chevron-left-extra" aria-hidden="true"></b>
   </span>
 
-  <h1 *ngFor="let description of descriptions | slice:0:1">{{description.userId}}</h1>
+  <h1>Action</h1>
 
   <div class="module-section clearfix">
     <ul id="content">
-      <li *ngFor="let description of descriptions | slice:0:10" class="card effect1">
-        <div *ngFor="let image of images | slice:0:1">
-          <img class="img-main" src="{{image.url}}">
+      <li *ngFor="let description of descriptions" class="card effect1">
+          <img class="img-main" src="{{description.image}}">
           <div class="box">
-            <h3>{{description.title | slice:1:25}}</h3>
-            <p>{{description.body | slice:1:100}}</p>
+            <h3>{{description.name}}</h3>
+            <p>{{description.synopsis}}</p>
+            <button type="button" class="btn btn-success" aria-label="Left Align">
+              <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true" style="margin-right: 10px"></span>Ajouter au panier
+            </button>
           </div>
-        </div>
       </li>
     </ul>
   </div>
