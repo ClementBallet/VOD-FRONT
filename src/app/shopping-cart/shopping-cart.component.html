@@ -15,7 +15,7 @@
       <tbody>
       <tr *ngFor="let image of images | slice:0:10">
         <th scope="row">1</th>
-        <td><img src="{{image.url}}" width="150px" height="200px"></td>
+        <td><img class="img-main" src="{{image.url}}"></td>
         <td *ngFor="let description of descriptions | slice:0:1">
           <h4>{{description.title | slice:1:20}}</h4>
           <p>{{description.body}} ...</p>
