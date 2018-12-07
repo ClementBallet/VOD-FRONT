@@ -116,6 +116,10 @@ ul{
   position:relative;
 }
 
+.content {
+  transition: margin-left ease 800ms;
+}
+
 .card{
   width: 20rem;
   background:#fff;
