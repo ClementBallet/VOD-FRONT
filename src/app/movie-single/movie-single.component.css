@@ -8,7 +8,7 @@
   margin-top: 150px;
 }
 
-.data-movie > div:nth-child(2) {
+.data-movie > div.data-movie-item-box {
   margin-left: 100px;
 }
 

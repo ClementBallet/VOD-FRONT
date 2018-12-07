@@ -8,6 +8,8 @@ import { Router } from '@angular/router';
 })
 export class MovieSingleComponent implements OnInit {
 
+  private youtubeModal;
+
   constructor(private router: Router) {
 
   }
@@ -15,4 +17,9 @@ export class MovieSingleComponent implements OnInit {
   ngOnInit() {
   }
 
+  showYoutubeModal() {
+     this.youtubeModal = document.querySelector(".modal-box");
+
+     this.youtubeModal.classList.add('show-youtube-modal');
+  }
 }
