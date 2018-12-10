@@ -33,7 +33,6 @@ export class HomeCarouselEnfantComponent implements OnInit {
       .subscribe( (response: any) => {
         this.descriptions = response;
         this.nbMovie = this.descriptions.length;
-        console.log(this.descriptions);
     });
   }
 

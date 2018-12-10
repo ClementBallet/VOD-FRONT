@@ -8,7 +8,7 @@
         class="movie-poster"
       >
     </div>
-    <app-modal-youtube></app-modal-youtube>
+    <app-modal-youtube [urlTrailer]="data.urlTrailer"></app-modal-youtube>
     <div class="data-movie-item-box">
       <h2>{{data.name}}</h2>
       <div class="data-movie-item">
@@ -18,10 +18,10 @@
         <p><span>Date de sortie:</span> {{data.date}}</p>
       </div>
       <div class="data-movie-item">
-        <p><span>Réalisateur:</span> J.J. Abrams</p>
+        <p><span>Réalisateur:</span> </p>
       </div>
       <div class="data-movie-item">
-        <p><span>Distribution:</span> Daisy Ridley, John Boyega, Oscar Isaac, Adam Driver, Harrison Ford, Carrie Fisher</p>
+        <p><span>Distribution:</span> </p>
       </div>
       <div class="data-movie-item rating">
         <span>Note moyenne:</span>
