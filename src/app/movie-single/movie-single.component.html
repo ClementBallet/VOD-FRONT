@@ -1,20 +1,21 @@
 <section class="section-movie-single col align-self-center">
   <div class="data-movie">
-    <div class="movie-poster-box">
+    <div class="movie-poster-box" (click)="showYoutubeModal()">
       <span class="play"></span>
       <img
-        src="http://fr.web.img4.acsta.net/pictures/15/10/18/18/56/052074.jpg"
-        alt="Star Wars, Le réveil de la force"
+        src="{{data.image}}"
+        alt="{{data.name}}"
         class="movie-poster"
       >
     </div>
-    <div>
-      <h2>Star Wars, Le réveil de la force</h2>
+    <app-modal-youtube></app-modal-youtube>
+    <div class="data-movie-item-box">
+      <h2>{{data.name}}</h2>
       <div class="data-movie-item">
-        <p><span>Synopsis:</span> Plus de 30 ans après la bataille d'Endor, qui a vu la chute de l'Empire galactique, la paix et la nouvelle république sont encore fragiles. Les nostalgiques de l'ancien régime, rassemblés sous la bannière du Premier Ordre, tentent de reprendre la main sur la force. A leur tête, le sinistre Kylo Ren lance des attaques pirates aux confins de la galaxie.</p>
+        <p><span>Synopsis:</span> {{data.synopsis}}</p>
       </div>
       <div class="data-movie-item">
-        <p><span>Date de sortie:</span> 14 décembre 2015</p>
+        <p><span>Date de sortie:</span> {{data.date}}</p>
       </div>
       <div class="data-movie-item">
         <p><span>Réalisateur:</span> J.J. Abrams</p>
