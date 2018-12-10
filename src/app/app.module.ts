@@ -23,6 +23,7 @@ import { RatingComponent } from './movie-single/rating/rating.component';
 import { MoviePricingComponent } from './movie-single/movie-pricing/movie-pricing.component';
 import { AboutComponent } from './about/about.component';
 import { ModalYoutubeComponent } from './movie-single/modal-youtube/modal-youtube.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { ModalYoutubeComponent } from './movie-single/modal-youtube/modal-youtub
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     RouterModule.forRoot(ROUTES),
     NgbModule,
     HttpClientModule,

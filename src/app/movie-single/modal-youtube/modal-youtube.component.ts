@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {HttpClient} from "@angular/common/http";
+import {log} from "util";
 
 @Component({
   selector: 'app-modal-youtube',
@@ -8,10 +10,12 @@ import { Component, OnInit } from '@angular/core';
 export class ModalYoutubeComponent implements OnInit {
 
   private youtubeModal;
+  @Input() dataToChildComponent;
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   ngOnInit() {
+    console.log('dataToChildComponent : ', this.dataToChildComponent);
   }
 
   hideYoutubeModal() {
