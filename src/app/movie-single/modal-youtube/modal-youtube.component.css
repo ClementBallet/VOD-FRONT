@@ -1,0 +1,17 @@
+.modal-box {
+  position: absolute;
+  z-index: 9999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: none;
+}
+
+.modal-box.show-youtube-modal {
+  display: block;
+}
+
+.modal-box button {
+  position: absolute;
+  left: 910px;
+}

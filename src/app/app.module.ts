@@ -22,6 +22,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RatingComponent } from './movie-single/rating/rating.component';
 import { MoviePricingComponent } from './movie-single/movie-pricing/movie-pricing.component';
 import { AboutComponent } from './about/about.component';
+import { ModalYoutubeComponent } from './movie-single/modal-youtube/modal-youtube.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
@@ -37,7 +38,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HomeCarouselEnfantComponent,
     HomeFiltersComponent,
     RatingComponent,
-    MoviePricingComponent
+    MoviePricingComponent,
+    ModalYoutubeComponent
   ],
   imports: [
     BrowserModule,
