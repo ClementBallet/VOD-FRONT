@@ -1,6 +1,6 @@
 body{
   background:#fff;
-
+  background-image: url("http://likeastorm.com/wp-content/uploads/2016/06/grunge-metal-background.jpg");
 }
 
 html {
@@ -14,7 +14,7 @@ html {
 
 #wrapper{
   max-width:100%;
-  padding:50px 75px 50px 45px;
+  padding:50px 75px 0px 45px;
   position:relative;
 }
 
@@ -109,7 +109,7 @@ button:focus {outline:0 !important;}
 ul{
   width:600em;
   list-style-type:none;
-  padding:50px 0 50px 0;
+  padding:10px 0 50px 0;
 }
 
 #content{

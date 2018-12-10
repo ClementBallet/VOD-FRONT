@@ -23,6 +23,7 @@ import { RatingComponent } from './movie-single/rating/rating.component';
 import { MoviePricingComponent } from './movie-single/movie-pricing/movie-pricing.component';
 import { AboutComponent } from './about/about.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     RouterModule.forRoot(ROUTES),
     NgbModule,
     HttpClientModule,
+    SharedModule,
   ],
   providers: [
     {provide: APP_BASE_HREF, useValue: ''}

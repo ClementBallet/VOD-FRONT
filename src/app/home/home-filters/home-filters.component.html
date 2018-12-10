@@ -2,12 +2,12 @@
   <section>
     <div class="center">
       <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Category
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a *ngFor="let category of categories" class="dropdown-item" href="#">{{category.name}}</a>
-        </div>
+        <select id="select-category" class="btn btn-secondary dropdown-toggle" (change)="onSelect(e)" aria-labelledby="dropdownMenuButton">
+          <option selected data-hidden="true">Category</option>
+          <option *ngFor="let category of categories  | orderBy: 'name'" value="{{category.name}}">
+              {{category.name}}
+          </option>
+        </select>
       </div>
       <div class="dropdown">
         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

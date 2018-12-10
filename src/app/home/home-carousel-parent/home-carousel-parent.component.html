@@ -1,4 +1,3 @@
-<!-- <section *ngFor="let category of categories ">-->
-  <app-home-carousel-enfant ></app-home-carousel-enfant>
-<!-- </section> -->
-
+<section *ngFor="let category of categories  | orderBy: 'name'">
+    <app-home-carousel-enfant [categoryTitle]="category.name" [categoryId]="category.id"></app-home-carousel-enfant>
+</section>

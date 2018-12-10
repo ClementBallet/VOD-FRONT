@@ -7,7 +7,7 @@ import { AboutComponent } from './about/about.component';
 
 export const ROUTES: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'movie', component: MovieSingleComponent },
+  { path: 'movie/:id', component: MovieSingleComponent },
   { path: 'cart', component: ShoppingCartComponent },
   { path: 'about', component: AboutComponent},
   { path: '',

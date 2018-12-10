@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-home-carousel-enfant',
@@ -9,23 +10,30 @@ import { HttpClient } from '@angular/common/http';
 
 export class HomeCarouselEnfantComponent implements OnInit {
 
-  images: any[];
+  @Input() categoryTitle: string;
+  @Input() categoryId: number;
+
+  images: any [];
   descriptions: any [];
-  categories: any[];
+  url: any;
+  urlMovie: any;
 
   marginCaroussel = 0;
   nbMovie = 0;
   widthContent = 0;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private router: Router) { }
 
   ngOnInit() {
 
+    this.url = 'http://127.0.0.1:8006/category/' + this.categoryId + '/movies';
+
     // ON RECUPERE LE DETAIL DU FILM
-    this.http.get('http://127.0.0.1:8006/api/movies')
+    this.http.get(this.url)
       .subscribe( (response: any) => {
-        this.descriptions = response['hydra:member'];
+        this.descriptions = response;
         this.nbMovie = this.descriptions.length;
+        console.log(this.descriptions);
     });
   }
 
@@ -45,5 +53,10 @@ export class HomeCarouselEnfantComponent implements OnInit {
     if (this.marginCaroussel < -this.widthContent) {
       this.marginCaroussel = -this.widthContent + 330;
     }
+  }
+
+  redirectToMovie(idMovie) {
+    this.urlMovie = '/movie/' + idMovie;
+    this.router.navigate([this.urlMovie], { skipLocationChange: false });
   }
 }

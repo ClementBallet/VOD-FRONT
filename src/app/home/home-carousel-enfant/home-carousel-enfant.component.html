@@ -5,11 +5,11 @@
     <b class="fa fa-chevron-left fa-chevron-left-extra" aria-hidden="true"></b>
   </span>
 
-  <h1>Action</h1>
+  <h1>{{categoryTitle}}</h1>
 
   <div class="module-section clearfix">
     <ul id="content" class="content" [ngStyle]="{'margin-left.px': marginCaroussel}">
-      <li *ngFor="let description of descriptions" class="card effect1">
+      <li *ngFor="let description of descriptions" class="card effect1" (click)="redirectToMovie(description.id)">
           <img class="img-main" src="{{description.image}}">
           <div class="box">
             <h3>{{description.name}}</h3>

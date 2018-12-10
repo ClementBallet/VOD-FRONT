@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-home-carousel-parent',
@@ -7,17 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeCarouselParentComponent implements OnInit {
 
-  categories = [];
+  allCategories: any[];
+  categories: any [];
 
-  constructor() {
-    this.categories = [
-      'https://jsonplaceholder.typicode.com/postsgfdgfdgfdgmldfgdmflgmldfkgmlfkd',
-      'https://jsonplaceholder.typicode.com/posts/1/comments',
-      'https://jsonplaceholder.typicode.com/posts/1/comments'
-    ];
+  constructor(private http: HttpClient) {
+
   }
 
   ngOnInit() {
-  }
+    this.http.get('http://127.0.0.1:8006/api/categories')
+      .subscribe( (response: any) => {
+        this.allCategories = response['hydra:member'];
+        this.categories = this.allCategories;
+      });
 
+    this.categories = [''];
+  }
 }
