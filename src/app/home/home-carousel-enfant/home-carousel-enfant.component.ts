@@ -27,12 +27,12 @@ export class HomeCarouselEnfantComponent implements OnInit {
   ngOnInit() {
 
     this.url = 'http://127.0.0.1:8006/category/' + this.categoryId + '/movies';
-
     // ON RECUPERE LE DETAIL DU FILM
     this.http.get(this.url)
       .subscribe( (response: any) => {
         this.descriptions = response;
         this.nbMovie = this.descriptions.length;
+
     });
   }
 

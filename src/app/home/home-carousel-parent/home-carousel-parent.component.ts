@@ -8,7 +8,6 @@ import { HttpClient } from '@angular/common/http';
 })
 export class HomeCarouselParentComponent implements OnInit {
 
-  allCategories: any[];
   categories: any [];
 
   constructor(private http: HttpClient) {
@@ -18,10 +17,7 @@ export class HomeCarouselParentComponent implements OnInit {
   ngOnInit() {
     this.http.get('http://127.0.0.1:8006/api/categories')
       .subscribe( (response: any) => {
-        this.allCategories = response['hydra:member'];
-        this.categories = this.allCategories;
+        this.categories = response['hydra:member'];
       });
-
-    this.categories = [''];
   }
 }

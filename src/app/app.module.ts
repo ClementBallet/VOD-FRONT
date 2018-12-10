@@ -4,7 +4,7 @@ import { APP_BASE_HREF } from '@angular/common';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { MovieSingleComponent } from './movie-single/movie-single.component';
+import { MovieSingleComponent } from './movie-single/single-general/movie-single.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 
 import { RouterModule } from '@angular/router';
@@ -19,10 +19,10 @@ import { HomeCarouselParentComponent } from './home/home-carousel-parent/home-ca
 import { HomeCarouselEnfantComponent } from './home/home-carousel-enfant/home-carousel-enfant.component';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { RatingComponent } from './movie-single/rating/rating.component';
-import { MoviePricingComponent } from './movie-single/movie-pricing/movie-pricing.component';
+import { RatingComponent } from './movie-single/single-rating/rating.component';
+import { MoviePricingComponent } from './movie-single/single-pricing/movie-pricing.component';
 import { AboutComponent } from './about/about.component';
-import { ModalYoutubeComponent } from './movie-single/modal-youtube/modal-youtube.component';
+import { ModalYoutubeComponent } from './movie-single/single-youtube/modal-youtube.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/shared.module';
 

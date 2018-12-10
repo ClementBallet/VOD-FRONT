@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 import { APP_CONFIG } from './app.config';
 
 import { NavbarComponent } from './navbar/navbar.component';
-import { MovieSingleComponent } from './movie-single/movie-single.component';
+import { MovieSingleComponent } from './movie-single/single-general/movie-single.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 // PAGE HOME
 import {HomeComponent} from "./home/home-global/home.component";

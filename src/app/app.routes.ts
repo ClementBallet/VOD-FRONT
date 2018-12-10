@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 
-import { MovieSingleComponent } from './movie-single/movie-single.component';
+import { MovieSingleComponent } from './movie-single/single-general/movie-single.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { HomeComponent } from './home/home-global/home.component';
 import { AboutComponent } from './about/about.component';

@@ -2,7 +2,7 @@
   <section>
     <div class="center">
       <div class="dropdown">
-        <select id="select-category" class="btn btn-secondary dropdown-toggle" (change)="onSelect(e)" aria-labelledby="dropdownMenuButton">
+        <select id="select-category" class="btn btn-secondary dropdown-toggle" (change)="onSelect()" aria-labelledby="dropdownMenuButton">
           <option selected data-hidden="true">Category</option>
           <option *ngFor="let category of categories  | orderBy: 'name'" value="{{category.name}}">
               {{category.name}}

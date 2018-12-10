@@ -9,11 +9,11 @@ import {HttpClient} from "@angular/common/http";
 })
 export class MovieSingleComponent implements OnInit {
 
-  public movieId;
-  private youtubeModal;
-  public dataUrl;
-  public data;
-  public urlTrailer;
+  movieId: any;
+  youtubeModal: any;
+  dataUrl: any;
+  data: any;
+  urlTrailer: any;
 
   constructor(private router: Router, private http: HttpClient, private activatedRoute: ActivatedRoute) {
 
@@ -26,7 +26,6 @@ export class MovieSingleComponent implements OnInit {
     this.http.get(this.dataUrl)
       .subscribe((response: any) => {
         this.data = response;
-        console.log('data', this.data);
         this.urlTrailer = this.data.urlTrailer;
       });
   }

@@ -18,17 +18,14 @@ export class HomeFiltersComponent implements OnInit {
     }
   }
 
-  onSelect(e) {
+  onSelect() {
     this.select = document.getElementById('select-category');
-
-    console.log('this.select.options[this.select.selectedIndex].value', this.select.options[this.select.selectedIndex].value);
   }
 
   ngOnInit() {
     this.http.get('http://127.0.0.1:8006/api/categories')
       .subscribe( (response: any) => {
         this.categories = response['hydra:member'];
-        console.log(this.categories);
     });
   }
 }

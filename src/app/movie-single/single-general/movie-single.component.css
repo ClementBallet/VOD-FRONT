@@ -40,7 +40,7 @@
 }
 
 .movie-poster-box:hover .play {
-  background: url("play.svg") no-repeat center center;
+  background: url("../single-general/play.svg") no-repeat center center;
   fill: #ffffff;
 }
 
