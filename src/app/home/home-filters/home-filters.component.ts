@@ -11,9 +11,12 @@ export class HomeFiltersComponent implements OnInit {
   categories: any[];
   years = [];
   select: any;
+  hideCategoryTitle = false;
+  hideNotesTitle = true;
+  hideYearsTitle = true;
 
   constructor(private http: HttpClient) {
-    for (let i = 1950; i < 2018; i++) {
+    for (let i = 1950; i < 2019; i++) {
       this.years.push(i);
     }
   }
@@ -23,9 +26,22 @@ export class HomeFiltersComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.getAllCategories();
+  }
+
+  getAllCategories() {
     this.http.get('http://127.0.0.1:8006/api/categories')
       .subscribe( (response: any) => {
+        this.hideCategoryTitle = true;
         this.categories = response['hydra:member'];
-    });
+      });
+  }
+
+  hideNotesTitleFunc() {
+    this.hideNotesTitle = false;
+  }
+
+  hideYearsTitleFunc(){
+    this.hideYearsTitle = false;
   }
 }

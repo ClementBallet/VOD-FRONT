@@ -7,6 +7,7 @@ import { OrderByPipe } from './order-by.pipe';
   imports: [
     CommonModule
   ],
-  exports: [OrderByPipe]
+  exports: [
+    OrderByPipe]
 })
 export class SharedModule { }

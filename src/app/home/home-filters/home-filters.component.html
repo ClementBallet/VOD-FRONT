@@ -1,30 +1,26 @@
 <main>
   <section>
-    <div class="center">
+    <div class="center-filters">
       <div class="dropdown">
         <select id="select-category" class="btn btn-secondary dropdown-toggle" (change)="onSelect()" aria-labelledby="dropdownMenuButton">
-          <option selected data-hidden="true">Category</option>
+          <option selected [hidden]="hideCategoryTitle">Categorie</option>
           <option *ngFor="let category of categories  | orderBy: 'name'" value="{{category.name}}">
               {{category.name}}
           </option>
         </select>
       </div>
       <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Notes
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#">Les mieux notés</a>
-          <a class="dropdown-item" href="#">Les moins bien notés</a>
-        </div>
+        <select class="btn btn-secondary dropdown-toggle" aria-labelledby="dropdownMenuButton" (onClick)="hideNotesTitleFunc()">
+          <option [hidden]="hideNotesTitle">Notes</option>
+          <option class="dropdown-item white">De la + haute à la + basse</option>
+          <option class="dropdown-item white">De la + basse à la + haute</option>
+        </select>
       </div>
       <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Année
-        </button>
-        <div class="dropdown-menu scroll" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#" *ngFor="let year of years">{{ year }}</a>
-        </div>
+        <select class="btn btn-secondary dropdown-toggle" aria-labelledby="dropdownMenuButton" (onClick)="hideYearsTitleFunc()">
+          <option [hidden]="hideYearsTitle">Année</option>
+          <option *ngFor="let year of years">{{ year }}</option>
+        </select>
       </div>
     </div>
   </section>

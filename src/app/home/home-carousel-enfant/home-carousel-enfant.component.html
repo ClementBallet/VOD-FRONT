@@ -9,7 +9,7 @@
 
   <div class="module-section clearfix">
     <ul id="content" class="content" [ngStyle]="{'margin-left.px': marginCaroussel}">
-      <li *ngFor="let description of descriptions" class="card effect1" (click)="redirectToMovie(description.id)">
+      <li *ngFor="let description of descriptions" class="card effect1" (click)="redirectToMovie(description.id)" >
           <img class="img-main" src="{{description.image}}">
           <div class="box">
             <h3>{{description.name}}</h3>

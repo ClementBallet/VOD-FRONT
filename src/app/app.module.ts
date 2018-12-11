@@ -26,6 +26,8 @@ import { ModalYoutubeComponent } from './movie-single/single-youtube/modal-youtu
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/shared.module';
 
+import { Ng4LoadingSpinnerModule } from 'ng4-loading-spinner';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,6 +51,7 @@ import { SharedModule } from './shared/shared.module';
     NgbModule,
     HttpClientModule,
     SharedModule,
+    Ng4LoadingSpinnerModule.forRoot()
   ],
   providers: [
     {provide: APP_BASE_HREF, useValue: ''}

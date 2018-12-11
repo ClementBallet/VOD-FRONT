@@ -1,4 +1,4 @@
-<section class="section-movie-single col align-self-center">
+<section class="section-movie-single col align-self-center" *ngIf="data">
   <div class="data-movie">
     <div class="movie-poster-box" (click)="showYoutubeModal()">
       <span class="play"></span>
@@ -8,7 +8,7 @@
         class="movie-poster"
       >
     </div>
-    <app-modal-youtube [urlTrailer]="data.urlTrailer"></app-modal-youtube>
+    <app-modal-youtube [urlTrailer]="urlTrailer"></app-modal-youtube>
     <div class="data-movie-item-box">
       <h2>{{data.name}}</h2>
       <div class="data-movie-item">
@@ -23,11 +23,14 @@
       <div class="data-movie-item">
         <p><span>Distribution:</span> </p>
       </div>
+
       <div class="data-movie-item rating">
         <span>Note moyenne:</span>
         <app-rating></app-rating>
       </div>
     </div>
   </div>
-  <app-movie-pricing></app-movie-pricing>
+  <app-movie-pricing [moviePricing]="data.price"></app-movie-pricing>
 </section>
+
+

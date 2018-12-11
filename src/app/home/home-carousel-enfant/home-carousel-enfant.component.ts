@@ -1,6 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import {Router} from '@angular/router';
+import { Ng4LoadingSpinnerService } from 'ng4-loading-spinner';
 
 @Component({
   selector: 'app-home-carousel-enfant',
@@ -22,17 +23,19 @@ export class HomeCarouselEnfantComponent implements OnInit {
   nbMovie = 0;
   widthContent = 0;
 
-  constructor(private http: HttpClient, private router: Router) { }
+  constructor(private http: HttpClient, private router: Router, private spinnerService: Ng4LoadingSpinnerService) { }
 
   ngOnInit() {
 
     this.url = 'http://127.0.0.1:8006/category/' + this.categoryId + '/movies';
+
+    this.spinnerService.show();
     // ON RECUPERE LE DETAIL DU FILM
     this.http.get(this.url)
       .subscribe( (response: any) => {
         this.descriptions = response;
         this.nbMovie = this.descriptions.length;
-
+        this.spinnerService.hide();
     });
   }
 

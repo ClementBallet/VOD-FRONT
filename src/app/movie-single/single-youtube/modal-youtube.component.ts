@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {DomSanitizer} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-modal-youtube',
@@ -7,19 +8,19 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class ModalYoutubeComponent implements OnInit {
 
-  private youtubeModal;
+  youtubeModal: any;
+  videoUrl: any;
 
-  @Input() urlTrailer;
+  @Input() urlTrailer: string;
 
-  constructor() { }
+  constructor(private sanitizer: DomSanitizer) { }
 
   ngOnInit() {
-    console.log(this.urlTrailer);
+    this.videoUrl = this.sanitizer.bypassSecurityTrustResourceUrl(this.urlTrailer);
   }
 
   hideYoutubeModal() {
     this.youtubeModal = document.querySelector('.modal-box');
-
     this.youtubeModal.classList.remove('show-youtube-modal');
   }
 }
