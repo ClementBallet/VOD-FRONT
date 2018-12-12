@@ -12,7 +12,7 @@ export class HomeFiltersComponent implements OnInit {
   years = [];
   select: any;
   hideCategoryTitle = false;
-  hideNotesTitle = true;
+  hideOrderTitle = true;
   hideYearsTitle = true;
 
   constructor(private http: HttpClient) {
@@ -38,7 +38,7 @@ export class HomeFiltersComponent implements OnInit {
   }
 
   hideNotesTitleFunc() {
-    this.hideNotesTitle = false;
+    this.hideOrderTitle = false;
   }
 
   hideYearsTitleFunc(){

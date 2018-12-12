@@ -16,6 +16,8 @@ export class MovieSingleComponent implements OnInit, OnChanges {
   data: any;
   urlTrailer: any;
 
+  overlayBackground: any;
+
   constructor(
     private router: Router,
     private http: HttpClient,
@@ -42,19 +44,23 @@ export class MovieSingleComponent implements OnInit, OnChanges {
       });
   }
 
-  // getAsyncDataMovie(): any {
-  //   this.http.get(this.dataUrl)
-  //     .subscribe((response: any) => {
-  //       this.data = response;
-  //       // this.urlTrailer = this.data.urlTrailer;
-  //       console.log(this.data);
-  //       console.log(this.urlTrailer);
-  //     });
-  // }
-
   showYoutubeModal() {
-    this.youtubeModal = document.querySelector('.modal-box');
+    this.spinnerService.show();
 
+    this.youtubeModal = document.querySelector('.modal-box');
     this.youtubeModal.classList.add('show-youtube-modal');
+
+    this.overlayBackground = document.querySelector('.overlay');
+    this.overlayBackground.classList.add('overlayBackground');
+
+    this.spinnerService.hide();
+  }
+
+  hideYoutubeModalByOverlay() {
+    this.youtubeModal = document.querySelector('.modal-box');
+    this.youtubeModal.classList.remove('show-youtube-modal');
+
+    this.overlayBackground = document.querySelector('.overlay');
+    this.overlayBackground.classList.remove('overlayBackground');
   }
 }

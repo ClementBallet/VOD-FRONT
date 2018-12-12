@@ -11,6 +11,8 @@ export class ModalYoutubeComponent implements OnInit {
   youtubeModal: any;
   videoUrl: any;
 
+  overlayBackground: any;
+
   @Input() urlTrailer: string;
 
   constructor(private sanitizer: DomSanitizer) { }
@@ -22,5 +24,8 @@ export class ModalYoutubeComponent implements OnInit {
   hideYoutubeModal() {
     this.youtubeModal = document.querySelector('.modal-box');
     this.youtubeModal.classList.remove('show-youtube-modal');
+
+    this.overlayBackground = document.querySelector('.overlay');
+    this.overlayBackground.classList.remove('overlayBackground');
   }
 }
