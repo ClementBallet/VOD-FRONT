@@ -15,6 +15,7 @@ export class HomeFiltersComponent implements OnInit {
   hideOrderTitle = true;
   hideYearsTitle = true;
 
+
   constructor(private http: HttpClient) {
     for (let i = 1950; i < 2019; i++) {
       this.years.push(i);

@@ -42,7 +42,7 @@ import { Ng4LoadingSpinnerModule } from 'ng4-loading-spinner';
     HomeFiltersComponent,
     RatingComponent,
     MoviePricingComponent,
-    ModalYoutubeComponent
+    ModalYoutubeComponent,
   ],
   imports: [
     BrowserModule,

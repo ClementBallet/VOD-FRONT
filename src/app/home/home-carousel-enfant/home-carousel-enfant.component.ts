@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import {Router} from '@angular/router';
+import { Router} from '@angular/router';
 import { Ng4LoadingSpinnerService } from 'ng4-loading-spinner';
 
 @Component({
@@ -27,13 +27,14 @@ export class HomeCarouselEnfantComponent implements OnInit {
 
   ngOnInit() {
 
-    this.url = 'http://127.0.0.1:8006/category/' + this.categoryId + '/movies';
+    this.url = 'http://127.0.0.1:8006/api/category/' + this.categoryId + '/movies';
 
     this.spinnerService.show();
     // ON RECUPERE LE DETAIL DU FILM
     this.http.get(this.url)
       .subscribe( (response: any) => {
         this.descriptions = response;
+        console.log('DESCRIPTION', this.descriptions)
         this.nbMovie = this.descriptions.length;
         this.spinnerService.hide();
     });

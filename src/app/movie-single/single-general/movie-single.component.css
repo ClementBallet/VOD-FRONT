@@ -55,7 +55,7 @@
 }
 
 .movie-poster-box:hover .play {
-  background: url("/play.svg") no-repeat center center;
+  background: url("/assets/img/play.svg") no-repeat center center;
 }
 
 .movie-poster-box:hover .movie-poster {

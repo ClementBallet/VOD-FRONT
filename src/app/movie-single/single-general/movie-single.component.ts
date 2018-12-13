@@ -32,7 +32,7 @@ export class MovieSingleComponent implements OnInit, OnChanges {
 
     this.movieId = this.activatedRoute.snapshot.paramMap.get('id');
     this.dataUrl = 'http://localhost:8006/api/movies/' + this.movieId;
-
+    console.log('this.dataUrl : ', this.dataUrl);
     this.spinnerService.show();
     this.http.get(this.dataUrl)
       .subscribe((response: any) => {

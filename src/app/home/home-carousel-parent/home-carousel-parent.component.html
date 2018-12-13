@@ -1,3 +1,11 @@
-<section *ngFor="let category of categories  | orderBy: 'name'">
+<ng-template *ngIf="moviesByCategory.length === 0; else elseBlock">
+  <section *ngFor="let category of categories  | orderBy: 'name'">
     <app-home-carousel-enfant [categoryTitle]="category.name" [categoryId]="category.id"></app-home-carousel-enfant>
-</section>
+  </section>
+</ng-template>
+
+<ng-template #elseBlock>
+  <section *ngFor="let movieByCategory of moviesByCategory">
+    <app-home-carousel-enfant [categoryTitle]="movieByCategory.name" [categoryId]="movieByCategory.id"></app-home-carousel-enfant>
+  </section>
+</ng-template>

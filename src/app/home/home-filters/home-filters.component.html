@@ -4,7 +4,7 @@
       <div class="dropdown">
         <select id="select-category" class="btn btn-secondary dropdown-toggle" (change)="onSelect()" aria-labelledby="dropdownMenuButton">
           <option selected [hidden]="hideCategoryTitle">Categorie</option>
-          <option *ngFor="let category of categories  | orderBy: 'name'" value="{{category.name}}">
+          <option *ngFor="let category of categories  | orderBy: 'name'" value="{{category.name}}" id="optCat">
               {{category.name}}
           </option>
         </select>
